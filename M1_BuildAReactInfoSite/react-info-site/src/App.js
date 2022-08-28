@@ -1,26 +1,26 @@
 import "./App.css";
 import "./logo192.png"
 
-// !Challenge: Starting from scratch, build and render the HTML for our section project. Check the Google slide for what you're trying to build.
+/*
+    !Challenge: 
 
-// We'll be adding styling to it later.
+    *Part 1: Create a page of your own using a custom Page component
 
-// Hints:
-// * The React logo is a file in the project tree, so you can access it by using `src="./react-logo.png" in your image element
-// * You can also set the `width` attribute of the image element just like in HTML. In the slide, I have it set to 40px
+    *It should return an ordered list with the reasons why you're excited to be learning React :)
+
+    *Render your list to the page
+ */
 
 function App() {
     return (
         <div>
             <img src="logo192.png" width="50" alt="react-logo"/>
-            <h1>Fun facts about React</h1>
-            <ul>
-                <li>Was first released in 2013</li>
-                <li>Was originally created by Jordan Walke</li>
-                <li>Has well over 100K stars on Github</li>
-                <li>Is mantained by Facebook</li>
-                <li>Powers thousands of enterprise apps, including mobile apps</li>
-            </ul>
+            <h1>Reasons why I'm excited about learning React!</h1>
+            <ol>
+                <li>Increase my programming knowledge</li>
+                <li>Create powerful web apps</li>
+                <li>Work in top companies around the world</li>
+            </ol>
         </div>
     );
 }
