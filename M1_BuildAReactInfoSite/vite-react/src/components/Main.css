@@ -14,3 +14,8 @@
     line-height: 19px;
     padding: 10px 0;
 }
+
+.main .list li::marker {
+    color: #61dafb;
+    font-size: 1.6rem;
+}
