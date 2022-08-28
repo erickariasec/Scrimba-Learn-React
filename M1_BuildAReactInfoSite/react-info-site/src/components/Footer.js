@@ -1,7 +1,9 @@
+import "./Footer.css"
+
 function Footer () {
     return (
-        <footer>
-            <small>© 2021 Ziroll development. All rights reserved.</small>
+        <footer className="footer">
+            <small className="rights-reserved">© 2022 Erick Arias development. All rights reserved.</small>
         </footer>
     );
 }

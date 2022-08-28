@@ -1,0 +1,13 @@
+.footer {
+    width: 100vw;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: #888;
+}
+
+.footer .rights-reserved {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
