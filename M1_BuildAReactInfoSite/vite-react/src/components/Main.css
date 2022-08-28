@@ -1,0 +1,16 @@
+.main {
+    height: 100vh;
+    padding: 16px 27px;
+    background-color: #282d35;
+    color: #fff;
+}
+
+.main .main-title {
+    padding: 46px 0;
+    font-size: 39.5px;
+}
+
+.main .list li {
+    line-height: 19px;
+    padding: 10px 0;
+}
