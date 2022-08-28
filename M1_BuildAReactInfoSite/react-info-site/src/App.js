@@ -4,23 +4,29 @@ import "./logo192.png"
 /*
     !Challenge: 
 
-    *Part 1: Create a page of your own using a custom Page component
-
-    *It should return an ordered list with the reasons why you're excited to be learning React :)
-
-    *Render your list to the page
+    * Part 2: 
+    *- Add a `header` element with a nested `nav` element. Inside the `nav`, include a `img` element with the image of the React logo inside (src="./react-logo.png") and make sure to set the width to something more manageable so it doesn't take up the whole screen
+    *- Add an `h1` with some text describing the page. (E.g. "Reasons I'm excited to learn React"). Place it above the ordered list.
+    *- Add a `footer` after the list that says: 
+    *    "© 20xx <last name here> development. All rights reserved."
  */
 
 function App() {
     return (
         <div>
-            <img src="logo192.png" width="50" alt="react-logo"/>
-            <h1>Reasons why I'm excited about learning React!</h1>
+            <header>
+                <nav>
+                    <img src="./logo192.png" width="50" alt="react-logo"/>
+                </nav>
+            </header>
+            <h1>Reasons I'm excited about learning React!</h1>
             <ol>
-                <li>Increase my programming knowledge</li>
-                <li>Create powerful web apps</li>
-                <li>Work in top companies around the world</li>
+                <li>It's a popular library, so I'll be able to fit in with the cool kids!</li>
+                <li>I'm more likely to get a job as a developer if I know React</li>
             </ol>
+            <footer>
+                <small>© 2022 Arias development. All rights reserved.</small>
+            </footer>
         </div>
     );
 }
