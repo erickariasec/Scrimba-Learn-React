@@ -2,3 +2,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.gray {
+  color: #918E9B;
+}
+
+.bold {
+  font-weight: bold;
+}
