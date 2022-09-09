@@ -4,6 +4,7 @@ function App() {
 
   const date = new Date();
   const hours = date.getHours();
+  const minutes = date.getMinutes();
   let timeOfDay = "";
   let background_color;
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="bg-color" style={{background: background_color}}>
       <h1>Good {timeOfDay}</h1>
+      <h2>{hours}:{minutes}</h2>
     </div>
   )
 }
