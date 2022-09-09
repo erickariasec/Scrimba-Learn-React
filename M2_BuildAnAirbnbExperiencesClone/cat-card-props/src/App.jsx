@@ -4,14 +4,6 @@ import mrWhiskerson from "../src/assets/mr-whiskerson.png"
 import fluffykins from "../src/assets/fluffykins.png"
 import felix from "../src/assets/felix.png"
 import pumpkin from "../src/assets/pumpkin.png"
-import phoneIcon from "./assets/phone-icon.png"
-import mailIcon from "./assets/mail-icon.png"
-
-/* 
-  !Challenge:
-
-  - Add all the rest of the data to the Contact card instances
-*/
 
 function App() {
   return (

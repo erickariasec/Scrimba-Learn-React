@@ -1,19 +1,21 @@
-import mrWhiskerson from "../assets/mr-whiskerson.png"
 import phoneIcon from "../assets/phone-icon.png"
 import mailIcon from "../assets/mail-icon.png"
 
-function Contact() {
+function Contact(props) {
+    /**
+        * !Challenge: Fix the code below to use the `props` object values in place of the hardcoded values below
+     */
     return (
         <div className="contact-card">
-            <img src={mrWhiskerson}/>
-            <h3>Mr. Whiskerson</h3>
+            <img src={props.img}/>
+            <h3>{props.name}</h3>
             <div className="info-group">
                 <img src={phoneIcon} />
-                <p>(212) 555-1234</p>
+                <p>{props.phoneNumber}</p>
             </div>
             <div className="info-group">
                 <img src={mailIcon} />
-                <p>mr.whiskaz@catnap.meow</p>
+                <p>{props.mail}</p>
             </div>
         </div>
     );
