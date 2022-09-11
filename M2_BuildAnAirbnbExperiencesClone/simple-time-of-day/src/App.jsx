@@ -10,13 +10,13 @@ function App() {
 
 
   if (hours < 12) {
-    timeOfDay = "morning";
+    timeOfDay = "Morning";
     background_color = "linear-gradient(120deg, #f6d365 0%, #fda085 100%)"
   } else if (hours >= 12 && hours <= 17) {
-    timeOfDay = "afternoon";
+    timeOfDay = "Afternoon";
     background_color = "linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%)"
   } else {
-    timeOfDay = "night";
+    timeOfDay = "Night";
     background_color = "linear-gradient(to top, #283E51, #0A2342)"
   }
 
