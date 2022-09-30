@@ -1,10 +1,10 @@
-import star from "../../public/assets/Card/star.png";
+import star from "/assets/Card/star.png";
 import "./Card.css";
 
 export default function Card(props) {
     return (
         <div className="card">
-            <img src={`../../public/assets/Card/${props.img}`} className="card-image" />
+            <img src={`/assets/Card/${props.img}`} className="card-image" />
             <div className="card-stats">
                 <img src={star} className="card-star" />
                 <span>{props.rating}</span>

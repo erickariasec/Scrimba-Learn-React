@@ -19,6 +19,7 @@ import cardData from './cardData';
 function App() {
   const cards = cardData.map(content => {
     return <Card 
+      key={content.id}
       img={content.coverImg}
       rating={content.stats.rating}
       reviewCount={content.stats.reviewCount}
@@ -32,7 +33,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">
+        {cards}
+      </section>
     </div>
   )
 }
