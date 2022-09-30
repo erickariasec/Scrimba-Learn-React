@@ -8,6 +8,7 @@ function Joke (props) {
                 <p className="like">👍 {props.upvotes}</p>
                 <p className="not-like">👎 {props.downvotes}</p>
             </div>
+            <h6>Author: {props.author}</h6>
             <hr />
         </div>
     );
