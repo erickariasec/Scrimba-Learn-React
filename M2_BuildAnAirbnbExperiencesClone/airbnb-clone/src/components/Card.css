@@ -21,6 +21,12 @@ section {
 .card-image {
     width: 100%;
     border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-stats {
@@ -30,6 +36,10 @@ section {
 
 .card-star {
     height: 14px;
+}
+
+.card-price {
+    margin-top: auto;
 }
 
 .card-badge {
