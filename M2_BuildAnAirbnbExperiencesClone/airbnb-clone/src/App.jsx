@@ -26,6 +26,7 @@ function App() {
       location={content.location}
       title={content.title}
       price={content.price}
+      openSpots={content.openSpots}
     />
   }) 
 
