@@ -14,12 +14,12 @@ function App() {
     * which you can then use to determine your new
     * value of state.
   */
- 
-  function add() {
+
+  const add = () => {
     setCount(prevCount => prevCount + 1)
   }
   
-  function subtract() {
+  const subtract = () => {
     setCount(prevCount => prevCount - 1)
   }
 
