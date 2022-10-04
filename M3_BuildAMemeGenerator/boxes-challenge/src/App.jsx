@@ -8,15 +8,32 @@ function App() {
   const [squares, setSquares] = useState(boxes)
 
   /**
-    * !Challenge: Create a toggle() function that logs
-    * "clicked!" to the console
+    * Challenge: use setSquares to update the
+    * correct square in the array.
     * 
-    * Pass that function down to each of the Box components
-    * and set it up so when they get clicked it runs the function
+    * Make sure not to directly modify state!
+    * 
+    * Hint: look back at the lesson on updating arrays
+    * in state if you need a reminder on how to do this
   */
 
   function toggle(id) {
-    console.log(id)
+    setSquares(prevSquares => {
+      const newSquares = []
+      for (let i = 0; i < prevSquares.length; i++) {
+        const currentSquare = prevSquares[i]
+        if (currentSquare.id === id) {
+          const updatedSquare = {
+            ...currentSquare,
+            on: !currentSquare.on
+          }
+          newSquares.push(updatedSquare)
+        } else {
+          newSquares.push(currentSquare)
+        }
+      }
+      return newSquares
+    })
   }
 
   const squareElements = squares.map(square => (
