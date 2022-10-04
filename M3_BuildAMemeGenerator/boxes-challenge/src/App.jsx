@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import boxes from './boxes'
+import Box from './components/Box'
 
-function App(props) {
+function App() {
 
   /**
     // !Challenge: use a ternary to determine the backgroundColor.
@@ -12,15 +13,12 @@ function App(props) {
 
   const [squares, setSquares] = useState(boxes)
 
-  const styles = {
-    backgroundColor: props.darkMode ? "#222222" : "#cccccc",
-    borderRadius: props.darkMode ? "50%" : "5px",
-    borderColor: props.darkMode ? "crimson" : "yellow"
-  }
-
-  const squareElements = squares.map(square => {
-    return <div style={styles} className="box" key={square.id}></div>
-  })
+  const squareElements = squares.map(square => (
+    <Box 
+      on={square.on}
+      key={square.id}
+    />
+  ))
 
   return (
     <div className="App">
