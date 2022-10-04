@@ -6,6 +6,7 @@ function Joke (props) {
         * !Challenge:
         * - Create state `isShown` (boolean, default to `false`)
         * - Add a button that toggles the value back and forth
+        * - Only display the punchline paragraph if `isShown` is true
     */
 
     const [isShown, setIsShown] = useState(false)
