@@ -15,12 +15,7 @@ function Joke (props) {
         setIsShown(prevIsShown => !prevIsShown)
     }
 
-    let wordAction
-    if (isShown) {
-        wordAction = "Hide"
-    } else {
-        wordAction = "Show"
-    }
+    const wordAction = isShown ? "Hide" : "Show"
 
     return (
         <div className="joke-card">
