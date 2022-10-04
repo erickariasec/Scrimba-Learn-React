@@ -6,25 +6,20 @@ export default function Form() {
             firstName: "",
             lastName: "",
             email: "",
-            comments: ""
+            comments: "",
+            isFriendly: true
         }
     )
-
-    console.log(formData)
     
     function handleChange(event) {
+        const {name, value, type, checked} = event.target
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: type === "checkbox" ? checked : value
             }
         })
     }
-
-    /**
-        * !Challenge: Add a textarea for "comments" to the form
-        * Make sure to update state when it changes.
-    */
     
     return (
         <form>
@@ -55,6 +50,14 @@ export default function Form() {
                 name="comments"
                 value={formData.comments}
             />
+            <input 
+                type="checkbox"
+                id="isFriendly"
+                checked={formData.isFriendly}
+                onChange={handleChange}
+                name="isFriendly"
+            />
+            <label htmlFor="isFriendly">Are you friendly?</label>
         </form>
     )
 }
