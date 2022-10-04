@@ -1,9 +1,24 @@
+import { useState } from "react";
+
 function Joke (props) {
+
+    /**
+        * !Challenge:
+        * - Create state `isShown` (boolean, default to `false`)
+        * - Add a button that toggles the value back and forth
+    */
+
+    const [isShown, setIsShown] = useState(false)
+
+    function toggle() {
+        setIsShown(prevIsShown => !prevIsShown)
+    }
+
     return (
         <div className="joke-card">
-            {/* If there is props.setup, render h3 if not not */}
             {props.setup && <h3>Setup: {props.setup}</h3>}
-            <p>Punchline: {props.punchline}</p>
+            {isShown && <p>Punchline: {props.punchline}</p>}
+            <button onClick={toggle}>Show Punchline</button>
             <div className="likes-container">
                 <p className="like">👍 {props.upvotes}</p>
                 <p className="not-like">👎 {props.downvotes}</p>
