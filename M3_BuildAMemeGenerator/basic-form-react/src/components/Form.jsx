@@ -4,9 +4,14 @@ export default function Form() {
     const [formData, setFormData] = useState(
         {
             firstName: "",
-            lastName: ""
+            lastName: "",
+            email: ""
         }
     )
+
+    /**
+        * !Challenge: add an email field/state to the form
+    */
     
     console.log(formData)
     
@@ -32,6 +37,12 @@ export default function Form() {
                 placeholder="Last Name"
                 onChange={handleChange}
                 name="lastName"
+            />
+            <input 
+                type="email"
+                placeholder="Email"
+                onChange={handleChange}
+                name="email" 
             />
         </form>
     )
