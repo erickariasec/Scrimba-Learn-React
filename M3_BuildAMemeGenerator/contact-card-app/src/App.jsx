@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Star from './components/Star'
 import userImg from "/assets/user.png"
 
 function App() {
@@ -10,6 +11,17 @@ function App() {
     email: "itsmyrealname@example.com",
     isFavorite: false
   })
+
+  /**
+    * !Challenge: Move the star image into its own component (Star)
+    * - It should receive a prop called `isFilled` that it
+    *   uses to determine which icon it will display
+    * - Import and render that component, passing the value of
+    *   `isFavorite` to the new `isFilled` prop.
+    * - Don't worry about the abiliity to flip this value quite yet.
+    *   Instead, you can test if it's working by manually changing
+    *   `isFavorite` in state above.
+  */
   
   let starIcon = contact.isFavorite ? "star-filled.png" : "star-empty.png"
   
@@ -28,10 +40,9 @@ function App() {
         <article className="card">
           <img src={userImg} className="card--image" />
           <div className="card--info">
-            <img 
-              src={`/assets/${starIcon}`}
-              className="card--favorite"
-              onClick={toggleFavorite}
+            <Star 
+              isFilled={contact.isFavorite}
+              handleClick={toggleFavorite}
             />
             <h2 className="card--name">
               {contact.firstName} {contact.lastName}
