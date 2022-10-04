@@ -15,11 +15,18 @@ function Joke (props) {
         setIsShown(prevIsShown => !prevIsShown)
     }
 
+    let wordAction
+    if (isShown) {
+        wordAction = "Hide"
+    } else {
+        wordAction = "Show"
+    }
+
     return (
         <div className="joke-card">
             {props.setup && <h3>Setup: {props.setup}</h3>}
             {isShown && <p>Punchline: {props.punchline}</p>}
-            <button onClick={toggle}>Show Punchline</button>
+            <button onClick={toggle} className="toggle">{wordAction} Punchline</button>
             <div className="likes-container">
                 <p className="like">👍 {props.upvotes}</p>
                 <p className="not-like">👎 {props.downvotes}</p>
