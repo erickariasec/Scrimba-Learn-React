@@ -20,7 +20,7 @@ input[type="text"], input[type="email"] {
 }
 
 input[type="checkbox"], input[type="radio"] {
-    margin-right: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 textarea {
