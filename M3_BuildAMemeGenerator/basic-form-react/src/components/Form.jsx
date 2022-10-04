@@ -5,9 +5,12 @@ export default function Form() {
         {
             firstName: "",
             lastName: "",
-            email: ""
+            email: "",
+            comments: ""
         }
     )
+
+    console.log(formData)
     
     function handleChange(event) {
         setFormData(prevFormData => {
@@ -17,6 +20,11 @@ export default function Form() {
             }
         })
     }
+
+    /**
+        * !Challenge: Add a textarea for "comments" to the form
+        * Make sure to update state when it changes.
+    */
     
     return (
         <form>
@@ -40,6 +48,12 @@ export default function Form() {
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
+            />
+            <textarea 
+                placeholder="Comments"
+                onChange={handleChange}
+                name="comments"
+                value={formData.comments}
             />
         </form>
     )
