@@ -30,3 +30,18 @@ textarea {
   font-size: 18px;
   display: block;
 }
+
+button {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: cadetblue;
+}
