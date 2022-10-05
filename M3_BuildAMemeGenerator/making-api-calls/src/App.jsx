@@ -3,29 +3,28 @@ import './App.css'
 
 function App() {
   const [starWarsData, setStarWarsData] = useState({})
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
 
   /**
-    * !Quiz:
-    * 1. What will happen if I put back our Star Wars API call
-    *    into the effect function?
-    * 2. How will the useEffect be different if I use 
-    *    setStarWarsData() instead of console.log()
-    * 3. What SHOULD be in our dependencies array in this case?
+    * !Challenge: Combine `count` with the request URL
+    * so pressing the "Get Next Character" button will
+    * get a new character from the Star Wars API.
+    * Remember: don't forget to consider the dependencies
+    * array!
   */
       
   useEffect(function() {
     console.log("Effect ran")
-    fetch("https://swapi.dev/api/people/1")
+    fetch(`https://swapi.dev/api/people/${count}`)
       .then(res => res.json())
       .then(data => setStarWarsData(data))
-  }, [])
+  }, [count])
 
   return (
     <div className="App">
-      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
       <h2>The count is {count}</h2>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
+      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
     </div>
   )
 }
